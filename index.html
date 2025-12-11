@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Thomas | Data & AI Solutions</title>
+    <meta name="description"
+        content="Personal portfolio of Sachin Thomas. Expert in Data Engineering, Analytics, and Generative AI applications.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">ST<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero" aria-label="Home"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" aria-label="Contact"><i class="fas fa-envelope"></i></a></li>
+                <li><button id="theme-toggle" aria-label="Toggle Theme"
+                        style="background:none; border:none; cursor:pointer; color:inherit; font-size:1rem;"><i
+                            class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="mobile-toggle" role="button" aria-label="Mobile Menu Toggle" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="accent-label">Data • Analytics • Generative AI</span>
+                    <h1><span class="nowrap-line">Building <span id="value-text"
+                                class="value-text">Reliable</span></span> <br><span class="gradient-text">Data Products
+                            & AI Solutions</span></h1>
+                    <p class="hero-sub">I help build solid data foundations and practical AI
+                        tools with a security-first
+                        approach. <br>No hype - Just solutions.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn-primary">View Work</a>
+                        <a href="#contact" class="btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-image-container">
+                        <img src="assets/images/main.png" alt="Sachin Thomas" class="profile-img">
+                    </div>
+                    <!-- Floating Cards -->
+                    <div class="glass-card float-animation">
+                        <i class="fa-solid fa-brain icon-large"></i>
+                        <p>Generative AI</p>
+                    </div>
+                    <div class="glass-card float-animation delay-1">
+                        <i class="fa-solid fa-database icon-large"></i>
+                        <p>Data Engineering</p>
+                    </div>
+                    <div class="glass-card float-animation delay-2">
+                        <i class="fa-solid fa-chart-line icon-large"></i>
+                        <p>Analytics</p>
+                    </div>
+
+                    <!-- Social Sidebar -->
+                    <div class="home-social">
+                        <a href="https://www.linkedin.com/in/sachinthomas91/" target="_blank" class="home-social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/sthomas-kt/" target="_blank" class="home-social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container about-container">
+                <div class="about-image-wrapper">
+                    <img src="assets/images/aboutme.png" alt="Sachin Thomas" class="about-img">
+                    <div class="img-backdrop"></div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">About Me</h2>
+                    <p>Data Engineer & GenAI Solutions Specialist <br><br>
+                        Building production-grade data systems and generative AI applications.
+                        I architect scalable pipelines, implement real-time data infrastructure,
+                        and deploy LLM-powered solutions that deliver measurable business impact at scale.</p>
+                    <p>With deep roots in data & analytics, I understand the 'why' behind every system I build.
+                        I bridge technical complexity and measurable business results. I'm committed to
+                        clean architecture, clear communication, and engineering solutions built to last.</p>
+                    <p>If I'm not working, you can find me 🏀⛹🏻 &nbsp;&nbsp; 🥾⛰️ &nbsp;&nbsp; 💸₿🏦📈 &nbsp;&nbsp; 📖 &nbsp;&nbsp; 💻🤖</p>
+                    <p>Let's build something amazing together 🚀</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="section bg-darker">
+            <div class="container">
+                <h2 class="section-title center">Core Expertise</h2>
+                <div class="expertise-grid">
+                    <div class="card expertise-card">
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h3>Data Engineering</h3>
+                        <p>Designing & architecting reliable, secure, scalable pipelines in modern data stacks.
+                            Expertise in SQL, Python, dbt, and cloud data warehouses.</p>
+                        <ul class="tech-list">
+                            <li><img src="assets/images/badges/PostgresSQL.svg" alt="Postgres" />Postgres</li>
+                            <li><img src="assets/images/badges/python-logo-only.svg" alt="Python" />Python</li>
+                            <li><img src="assets/images/badges/dbt.png" alt="dbt" />dbt</li>
+                            <li><img src="assets/images/badges/docker.svg" alt="Docker" />Docker</li>
+                            <li><img src="assets/images/badges/snowflake.svg" alt="Snowflake" />Snowflake</li>
+                            <li><img src="assets/images/badges/bigquery.svg" alt="BigQuery" />BigQuery</li>
+                            <li><img src="assets/images/badges/AWS.png" alt="AWS" />AWS</li>
+                            <li><img src="assets/images/badges/Google-Cloud.svg" alt="GCP" />GCP</li>
+                            <li><img src="assets/images/badges/Apache-Spark.svg" alt="Apache Spark" />Apache Spark</li>
+                            <li><img src="assets/images/badges/Apache.svg" alt="Apache Iceberg" />Apache Iceberg</li>
+                            <li><img src="assets/images/badges/Apache-Airflow.svg" alt="Apache Airflow" />Apache Airflow
+                            <li><img src="assets/images/badges/datadog.svg" alt="DataDog" />DataDog
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card expertise-card">
+                        <div class="card-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Generative AI</h3>
+                        <p>Building custom AI agents and tools powered by Large Language Models.
+                            Specializing in RAG systems, agentic workflows, and LLM-powered automation
+                            across local, cloud, and hybrid environments.
+                        </p>
+                        <ul class="tech-list">
+                            <li>LLMs</li>
+                            <li><img src="assets/images/badges/Ollama.svg" alt="Ollama" />Ollama</li>
+                            <li>AI Agents</li>
+                            <li>LangChain</li>
+                            <li>LangGraph</li>
+                            <li>Chatbots</li>
+                            <li>RAG</li>
+                            <li>MCP</li>
+                            <li>Vector DB</li>
+                            <li>Fine Tuning</li>
+                            <li><img src="assets/images/badges/n8n_color.svg" alt="n8n" /></li>
+                        </ul>
+                    </div>
+                    <div class="card expertise-card">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Analytics</h3>
+                        <p>Building analytics solutions that turn data into insights. Expertise in
+                            exploratory analysis, dashboard design, and self-service BI platforms.</p>
+                        <ul class="tech-list">
+                            <li><img src="assets/images/badges/tableau.svg" alt="Tableau" />Tableau</li>
+                            <li><img src="assets/images/badges/looker.svg" alt="Looker" />Looker</li>
+                            <li><img src="assets/images/badges/powerbi.svg" alt="Power BI" />Power BI</li>
+                            <li><img src="assets/images/badges/Pandas.png" alt="Pandas" />Pandas</li>
+                            <li><img src="assets/images/badges/Matplotlib.svg" alt="Matplotlib" />Matplotlib</li>
+                            <li><img src="assets/images/badges/Streamlit.svg" alt="Streamlit" />Streamlit</li>
+                            <li><img src="assets/images/badges/hex.svg" alt="Hex" />Hex</li>
+                            <li><img src="assets/images/badges/Ploty.svg" alt="Plotly" />Plotly</li>
+                            <li>Business Intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certification Carousel -->
+            <div class="cert-carousel-container">
+                <div class="cert-carousel">
+                    <div class="cert-track">
+                        <!-- Original Set -->
+                        <a href="https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/sachinthomas91/2025-06-06.png"
+                            target="_blank" class="cert-item" title="Hugging Face AI Agents">
+                            <img src="assets/images/badges/huggingface-color.svg" alt="Hugging Face AI Agents"
+                                class="cert-img">
+                            <span>HF AI Agents</span>
+                        </a>
+                        <a href="https://www.credly.com/badges/30d29877-8245-48b3-bf05-7a42bf130108/linked_in_profile"
+                            target="_blank" class="cert-item" title="Google Cloud AI Agents">
+                            <img src="assets/images/badges/google-color.svg" alt="Google Cloud AI Agents"
+                                class="cert-img">
+                            <span>Google Cloud AI Agents</span>
+                        </a>
+                        <a href="https://verify.skilljar.com/c/my3pciamwjp6" target="_blank" class="cert-item"
+                            title="Anthropic Intro to MCP">
+                            <img src="assets/images/badges/anthropic.svg" alt="Anthropic Intro to MCP" class="cert-img">
+                            <span>Anthropic MCP</span>
+                        </a>
+                        <a href="https://www.credly.com/earner/earned/badge/4ff6cba1-a2e2-48ee-9145-a5168667c48f"
+                            target="_blank" class="cert-item" title="Google Data Analytics Professional">
+                            <img src="assets/images/badges/google-color.svg" alt="Google Data Analytics Professional"
+                                class="cert-img">
+                            <span>Google Data Analytics Professional</span>
+                        </a>
+                        <a href="https://credentials.getdbt.com/257acc43-1433-4c59-9f66-602e73675315" target="_blank"
+                            class="cert-item" title="dbt Fundamentals">
+                            <img src="assets/images/badges/dbt.png" alt="dbt Fundamentals" class="cert-img">
+                            <span>dbt Fundamentals</span>
+                        </a>
+                        <a href="https://community.n8n.io/badges/105/completed-n8n-course-level-2?username=st91"
+                            target="_blank" class="cert-item" title="n8n Course Level 2">
+                            <img src="assets/images/badges/n8n_color.svg" alt="n8n Course Level 2" class="cert-img">
+                            <span>Level 2: Intermediate</span>
+                        </a>
+
+                        <!-- Duplicate Set for Infinite Scroll -->
+                        <a href="https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/sachinthomas91/2025-06-06.png"
+                            target="_blank" class="cert-item" title="Hugging Face AI Agents">
+                            <img src="assets/images/badges/huggingface-color.svg" alt="Hugging Face AI Agents"
+                                class="cert-img">
+                            <span>HF AI Agents</span>
+                        </a>
+                        <a href="https://www.credly.com/badges/30d29877-8245-48b3-bf05-7a42bf130108/linked_in_profile"
+                            target="_blank" class="cert-item" title="Google Cloud AI Agents">
+                            <img src="assets/images/badges/google-color.svg" alt="Google Cloud AI Agents"
+                                class="cert-img">
+                            <span>Google Cloud AI Agents</span>
+                        </a>
+                        <a href="https://verify.skilljar.com/c/my3pciamwjp6" target="_blank" class="cert-item"
+                            title="Anthropic Intro to MCP">
+                            <img src="assets/images/badges/anthropic.svg" alt="Anthropic Intro to MCP" class="cert-img">
+                            <span>Anthropic MCP</span>
+                        </a>
+                        <a href="https://www.credly.com/badges/4fa01a1e-238f-4948-abdf-b959942f3632?source=linked_in_profile"
+                            target="_blank" class="cert-item" title="Google Data Analytics">
+                            <img src="assets/images/badges/google-color.svg" alt="Google Data Analytics Professional"
+                                class="cert-img">
+                            <span>Google Data Analytics Professional</span>
+                        </a>
+                        <a href="https://credentials.getdbt.com/257acc43-1433-4c59-9f66-602e73675315" target="_blank"
+                            class="cert-item" title="dbt Fundamentals">
+                            <img src="assets/images/badges/dbt.png" alt="dbt Fundamentals" class="cert-img">
+                            <span>dbt Fundamentals</span>
+                        </a>
+                        <a href="https://community.n8n.io/badges/105/completed-n8n-course-level-2?username=st91"
+                            target="_blank" class="cert-item" title="n8n Course Level 2">
+                            <img src="assets/images/badges/n8n_color.svg" alt="n8n Course Level 2" class="cert-img">
+                            <span>Level 2: Intermediate</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title center">Featured Work</h2>
+                <div class="carousel-container">
+                    <button class="nav-arrow prev-arrow" aria-label="Previous Slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <!-- Slide 1: Ask Your Data -->
+                            <li class="carousel-slide current-slide">
+                                <div class="slide-visual">
+                                    <img src="assets/images/ask_your_data_bg.png" alt="Ask Your Data Interface"
+                                        class="slide-image">
+                                    <div class="visual-overlay">
+                                        <i class="fas fa-play-circle play-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="slide-content">
+                                    <h3 class="slide-title">Ask Your Data</h3>
+                                    <p class="slide-desc">
+                                        A local RAG application that lets you chat with your database. Features
+                                        automatic
+                                        SQL generation, intelligent chart selection, and privacy-first local processing
+                                        using Ollama.
+                                    </p>
+                                    <div class="slide-tags">
+                                        <img src="assets/images/badges/PostgresSQL.svg" alt="PostgreSQL"
+                                            title="PostgreSQL">
+                                        <img src="assets/images/badges/dbt.png" alt="dbt" title="dbt">
+                                        <img src="assets/images/badges/ollama.svg" alt="Ollama" title="Ollama">
+                                        <img src="assets/images/badges/Streamlit.svg" alt="Streamlit" title="Streamlit">
+                                        <img src="assets/images/badges/docker.svg" alt="Docker" title="Docker">
+                                        <img src="assets/images/badges/python-logo-only.svg" alt="Python"
+                                            title="Python">
+                                    </div>
+                                    <div class="slide-actions">
+                                        <a href="https://github.com/sachinthomas91/ask-your-data" target="_blank"
+                                            class="btn-primary">
+                                            View Code <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Slide 2: n8n Self Host -->
+                            <li class="carousel-slide">
+                                <div class="slide-visual n8n-gradient">
+                                    <i class="fas fa-network-wired placeholder-icon"></i>
+                                </div>
+                                <div class="slide-content">
+                                    <h3 class="slide-title">n8n Self Host</h3>
+                                    <p class="slide-desc">
+                                        Complete infrastructure setup for self-hosting n8n. Enables secure, private
+                                        workflow
+                                        automation with custom Docker configuration and reverse proxy management.
+                                    </p>
+                                    <div class="slide-tags">
+                                        <img src="assets/images/badges/n8n_color.svg" alt="n8n" title="n8n">
+                                        <img src="assets/images/badges/docker.svg" alt="Docker" title="Docker">
+                                        <img src="assets/images/badges/google-color.svg" alt="Google Cloud"
+                                            title="Google Cloud">
+                                    </div>
+                                    <div class="slide-actions">
+                                        <a href="https://github.com/sachinthomas91/n8n_self_host" target="_blank"
+                                            class="btn-primary">
+                                            View Code <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Slide 3: Learn Gen AI -->
+                            <li class="carousel-slide">
+                                <div class="slide-visual ai-gradient">
+                                    <i class="fas fa-graduation-cap placeholder-icon"></i>
+                                </div>
+                                <div class="slide-content">
+                                    <h3 class="slide-title">Learn Gen AI</h3>
+                                    <p class="slide-desc">
+                                        A curated repository of generative AI experiments and tutorials. Covers
+                                        everything
+                                        from basic LLM concepts to advanced agentic workflows and prototype
+                                        implementations.
+                                    </p>
+                                    <div class="slide-tags">
+                                        <img src="assets/images/badges/huggingface-color.svg" alt="Hugging Face"
+                                            title="Hugging Face">
+                                        <img src="assets/images/badges/anthropic.svg" alt="Anthropic" title="Anthropic">
+                                        <img src="assets/images/badges/ollama.svg" alt="Ollama" title="Ollama">
+                                        <img src="assets/images/badges/python-logo-only.svg" alt="Python"
+                                            title="Python">
+                                    </div>
+                                    <div class="slide-actions">
+                                        <a href="https://github.com/sachinthomas91/learn_gen_ai" target="_blank"
+                                            class="btn-primary">
+                                            View Code <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="nav-arrow next-arrow" aria-label="Next Slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <div class="carousel-nav">
+                        <button class="carousel-indicator current-slide" data-target-index="0"></button>
+                        <button class="carousel-indicator" data-target-index="1"></button>
+                        <button class="carousel-indicator" data-target-index="2"></button>
+                    </div>
+                </div>
+                <div class="center-btn">
+                    <a href="https://github.com/sachinthomas91?tab=repositories" target="_blank"
+                        class="btn-secondary">View All Repositories</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container contact-container">
+                <div class="contact-text">
+                    <h2>Ready to Build?</h2>
+                    <p>Whether you need a data engineering strategy, an AI prototype, or a full-scale implementation,
+                        I'm ready to help you architect and deploy it.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:contact@example.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sachinthomas91/" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/sachinthomas91/" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 ST.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/ai-animation.js"></script>
+</body>
+
+</html>
