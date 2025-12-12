@@ -140,6 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Custom Animation Handler
     document.addEventListener('scroll', () => {
+        // Disable parallax on mobile to prevent overlap
+        if (window.innerWidth <= 768) return;
+
         const scrolled = window.scrollY;
         const heroVisual = document.querySelector('.hero-visual');
         if (heroVisual) {
