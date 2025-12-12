@@ -530,8 +530,20 @@ img {
 
 @media (max-width: 768px) {
     .home-social {
-        display: none;
-        /* Hide on mobile */
+        display: flex;
+        /* Show on mobile */
+        position: relative;
+        /* Remove absolute positioning */
+        top: auto;
+        right: auto;
+        transform: none;
+        flex-direction: row;
+        /* Horizontal alignment */
+        justify-content: center;
+        width: 100%;
+        margin-top: 2rem;
+        /* Add space below image */
+        gap: 2rem;
     }
 }
 
@@ -607,9 +619,34 @@ img {
     gap: var(--spacing-md);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .expertise-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+        /* Space for scrollbar if visible/touch area */
+        -webkit-overflow-scrolling: touch;
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin-right: -1rem;
+        /* Negative margin to pull to edge */
+        padding-right: 1rem;
+        /* Padding to compensate */
+    }
+
+    .expertise-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .expertise-card {
+        flex: 0 0 85%;
+        /* Show 85% of card to hint at more */
+        scroll-snap-align: center;
+        min-width: 0;
+        /* Fix flex issue */
     }
 }
 
@@ -961,60 +998,130 @@ img {
     transform: scale(1.2);
 }
 
+/* Global Mobile Container Adjustment */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+        /* Reduce to 0.5rem to widen content (requested) */
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section {
+        padding: var(--spacing-lg) 0;
+        /* consistent vertical spacing */
+    }
+}
+
 /* Mobile Responsive */
 /* Mobile Responsive Carousel - Stacked View */
+/* Mobile Responsive Carousel - Restore Horizontal Slide but Adaptive */
 @media (max-width: 768px) {
     .carousel-container {
         padding: 0;
+        position: relative;
     }
 
     .carousel-track-container {
-        height: auto;
-        overflow: visible;
+        height: 500px;
+        /* Force height for mobile slide */
+        overflow: hidden;
     }
 
     .carousel-track {
         display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        height: auto;
+        /* Keep row for horizontal slide */
+        flex-direction: row;
+        gap: 0;
+        /* JS handles positioning */
+        height: 100%;
     }
 
     .carousel-slide {
-        position: relative;
-        top: auto;
-        left: auto;
+        position: absolute;
+        /* Restore absolute positioning for slide effect */
+        top: 0;
+        left: 0;
         width: 100%;
-        opacity: 1;
-        /* Force visible */
-        pointer-events: all;
+        opacity: 0;
+        pointer-events: none;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        transition: opacity 0.4s ease-in-out;
     }
 
-    /* Hide Navigation controls */
-    .nav-arrow,
+    .carousel-slide.current-slide {
+        opacity: 1;
+        pointer-events: all;
+        z-index: 10;
+        display: flex;
+    }
+
+    /* Restore Navigation controls for mobile */
+    .nav-arrow {
+        display: block;
+        background: rgba(255, 255, 255, 0.8);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 30;
+    }
+
+    .prev-arrow {
+        left: 10px;
+    }
+
+    .next-arrow {
+        right: 10px;
+    }
+
     .carousel-nav {
-        display: none;
+        display: flex;
     }
 
     .slide-visual {
         width: 100%;
-        height: 220px;
+        height: 200px;
+        /* Smaller image on mobile */
     }
 
     .slide-content {
-        text-align: left;
-        padding: 0 0.5rem;
+        text-align: center;
+        padding: 0 1.5rem;
+        /* More padding for text */
+    }
+
+    /* Force play button visibility on mobile */
+    .visual-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.1);
+        /* Lighter background for better visibility */
+    }
+
+    .play-icon {
+        font-size: 3rem;
+        /* Slightly smaller for mobile */
     }
 
     .slide-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .slide-desc {
+        text-align: center;
+        font-size: 1rem;
     }
 
     .slide-tags {
-        justify-content: flex-start;
+        justify-content: center;
+    }
+
+    .slide-actions {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -1135,7 +1242,16 @@ footer {
         grid-template-columns: 1fr;
         text-align: center;
         gap: var(--spacing-md);
-        padding: 0 var(--spacing-sm);
+        padding: 0 var(--spacing-md);
+        /* Keep 2rem padding for Hero -> narrower than others */
+        max-width: 100%;
+        /* Removed overflow-x: hidden to allow scrolling if needed, but we fix the cause instead */
+    }
+
+    .hero-text {
+        max-width: 90%;
+        /* Reset to 90% for better balance */
+        margin: 0 auto;
     }
 
     .hero-btns {
@@ -1144,33 +1260,97 @@ footer {
 
     .hero-visual {
         height: auto;
-        min-height: 300px;
+        min-height: 350px;
         margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        overflow: visible;
+        width: 100%;
+        position: relative;
+        padding: 0 1rem;
+        /* Match the global mobile container padding */
+        box-sizing: border-box;
+        /* Ensure padding is included in width */
+        flex-direction: column;
+        /* Stack image and social icons vertically */
     }
 
-    /* Adjust floating cards for mobile */
+    /* Adjust floating cards for strictly within viewport */
     .hero-visual .glass-card {
-        transform: scale(0.8);
+        transform: none;
+        /* Remove scale, explicit size instead */
+        min-width: unset;
+        width: 90px;
+        height: 90px;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
     }
 
+    .hero-visual .glass-card i {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .hero-visual .glass-card p {
+        font-size: 0.7rem;
+        line-height: 1.1;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Top Left */
     .hero-visual .glass-card:nth-child(2) {
         top: 0;
-        left: 5%;
+        left: 2%;
+        /* Indent slightly */
+        right: auto;
     }
 
+    /* Bottom Right */
     .hero-visual .glass-card:nth-child(3) {
         top: auto;
-        bottom: 10%;
-        right: 0;
+        bottom: 20%;
+        right: 2%;
+        /* Indent slightly */
+        left: auto;
     }
 
+    /* Bottom Left */
     .hero-visual .glass-card:nth-child(4) {
-        bottom: -10%;
-        left: 10%;
+        bottom: -5%;
+        left: 5%;
+        right: auto;
+    }
+
+    /* Resize profile image for mobile to prevent overflow */
+    .profile-image-container {
+        width: 280px;
+        height: 280px;
+        padding: 6px;
+        /* slightly less padding */
     }
 
     .about-container {
-        grid-template-columns: 1fr;
+        display: block;
+        /* Switch to block to avoid grid issues */
+        width: 100%;
+        padding-top: var(--spacing-lg);
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .value-text {
+        min-width: auto;
+        /* Remove fixed width on mobile */
+    }
+
+    .about-image-wrapper {
+        display: none;
     }
 
     .nav-links {
