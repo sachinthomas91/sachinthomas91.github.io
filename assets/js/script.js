@@ -20,15 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
+    const themeIcon = document.getElementById('theme-icon');
+
+    const darkIconImg = `<img src="assets/images/icons/dark-theme-icon.png" alt="Dark Mode" style="width: 24px; height: 24px; vertical-align: middle;">`;
+    const lightIconEmoji = '🔆';
 
     // Check saved theme or default
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
         if (savedTheme === 'dark') {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
+            themeIcon.innerHTML = lightIconEmoji;
         }
     }
 
@@ -40,11 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', newTheme);
 
         if (newTheme === 'dark') {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
+            themeIcon.innerHTML = lightIconEmoji;
         } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
+            themeIcon.innerHTML = darkIconImg;
         }
     });
 
